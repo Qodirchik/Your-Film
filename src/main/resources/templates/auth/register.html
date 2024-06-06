@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../../static/css/style-button.css" th:href="@{/css/style-button.css}">
+</head>
+<body>
+<div class="login-box">
+    <form th:action="@{/auth/register}" method="post">
+        <h2>Register</h2>
+<!--        <input type="text" hidden="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
+        <div class="user-box">
+            <input type="text" name="firstName" placeholder="" required="">
+            <label>FirstName</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="lastName" placeholder="" required="">
+            <label>LastName</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="phoneNumber" placeholder="" required="">
+            <label>Phone number</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="username" placeholder="" required="">
+            <label>Username</label>
+        </div>
+        <div class="user-box">
+            <input type="email" name="email" placeholder="" required="">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" placeholder="" required="">
+            <label>Password</label>
+        </div>
+        <div class="user-box">
+            <input type="date" name="birthDate" placeholder="" required="">
+        </div>
+        <button type="submit" style="--clr:#0FF0FC"><span>Register</span><i></i></button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: created-new-video-table
+      author: abduqodirzuvaydullaev07@gmail.com
+      changes:
+        - createTable:
+            tableName: "video"
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                  name: id
+                  type: uuid
+              - column:
+                  name: name
+                  type: varchar

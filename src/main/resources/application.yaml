@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:1212/postgres
+    username: postgres
+    password: secret
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 84309017236-0is33v38i3j52qrm7e57sjm9eacnoulb.apps.googleusercontent.com
+            client-secret: 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

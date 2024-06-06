@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: 'postgres:16'
+    container_name: 'yourFilm'
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: postgres
+    ports:
+      - '1212:5432'

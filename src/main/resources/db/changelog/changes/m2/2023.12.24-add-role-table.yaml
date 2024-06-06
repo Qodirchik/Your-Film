@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: created-new-role-table
+      author: abduqodirzuvaydullaev07@gmail.com
+      changes:
+        - createTable:
+            tableName: "role"
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                  name: id
+                  type: uuid
+              - column:
+                  constraints:
+                    unique: true
+                  name: name
+                  type: varchar

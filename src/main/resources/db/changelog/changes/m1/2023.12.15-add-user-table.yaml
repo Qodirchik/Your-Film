@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: created-new-user-table
+      author: abduqodirzuvaydullaev07@gmail.com
+      changes:
+        - createTable:
+            tableName: "user"
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                  name: id
+                  type: uuid
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: varchar
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: varchar
+              - column:
+                  constraints:
+                    nullable: false
+                    unique: true
+                  name: phone_number
+                  type: varchar
+              - column:
+                  constraints:
+                    nullable: false
+                    unique: true
+                  name: username
+                  type: varchar
+              - column:
+                  constraints:
+                    nullable: false
+                    unique: true
+                  name: email
+                  type: varchar
+              - column:
+                  constraints:
+                    nullable: false
+                  name: password
+                  type: varchar
+              - column:
+                  constraints:
+                    nullable: false
+                  name: birth_date
+                  type: timestamp
